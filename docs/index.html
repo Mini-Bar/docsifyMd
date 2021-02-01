@@ -19,14 +19,16 @@
 		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"> -->
 	</head>
 	<body>
-		<nav>
-			<a href="#/">EN</a>
-			<a href="#/zh-cn/">中文</a>
-		</nav>
+
 		<div id="app">
 			<!-- mini -->
+			<!-- <img src="" > -->
 		</div>
+
+
+
 		<script>
+			// 离线模式
 			if (typeof navigator.serviceWorker !== 'undefined') {
 				navigator.serviceWorker.register('sw.js')
 			}
@@ -35,33 +37,11 @@
 				loadNavbar: true,
 				coverpage: true,
 				subMaxLevel: 2,
+
 				name: 'MiniBar',
-				// repo: '',
-				// GENERAL
-				// -----------------------------------------------------------------
-				// name: 'docsify-copy-code',
 				repo: 'https://github.com/Mini-Bar/docsifyMd.git',
-				// loadNavbar: 'navbar.md',
-				// themeColor: 'purple',
 
-				// NAVIGATION
-				// -----------------------------------------------------------------
-				alias: {
-					// Reuse navbar for all locals
-					'/.*/navbar.md': '/navbar.md',
-					// Locals
-					'/zh-cn/(.*)': './zh-cn/$1',
-					'/de-de/(.*)': './de-de/$1',
-					'/ru/(.*)': './ru/$1',
-					'/es/(.*)': './es/$1'
-				},
-
-				// PLUGINS
-				// -----------------------------------------------------------------
 				copyCode: {
-					// buttonText : 'buttonText:String',
-					// errorText  : 'errorText:String',
-					// successText: 'successText:String'
 
 					buttonText: {
 						'/': '点击复制'
@@ -72,13 +52,23 @@
 					successText: {
 						'/': '复制'
 					}
+				},
+				search: {
+					paths: 'auto',
+					placeholder: '搜索',
+					noData: '找不到结果',
+					depth: 3,
+				},
+				count: {
+					countable: true,
+					fontsize: '0.9em',
+					color: 'rgb(90,90,90)',
+					language: 'chinese'
 				}
+
 			}
 		</script>
 
-
-		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<script>
 			const gitalk = new Gitalk({
 				clientID: '2905c4da17cdbdc8bcdf',
@@ -89,23 +79,27 @@
 				// facebook-like distraction free mode
 				distractionFreeMode: false
 			})
-		 // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
-		    window.onhashchange = function(event){
-		      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
-		        location.reload()
-		      }
-		    }
-		    // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
-		    // gitalk.render('gitalk-container')
+			// 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+			window.onhashchange = function(event) {
+				if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
+					location.reload()
+				}
+			}
+			// 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
+			// gitalk.render('gitalk-container')
 		</script>
 
 
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<!-- Docsify v4 -->
 		<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
 
 		<!-- 图片自动缩放 -->
+		<!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> -->
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
 		<!-- 复制 -->
@@ -123,8 +117,10 @@
 		<!-- 引入 CSS 文件 -->
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
 		<!-- 或引入压缩版文件 -->
-		<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+		
+
+		<!-- 分页导航 -->
+		<!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
 	</body>
 </html>

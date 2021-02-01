@@ -1,6 +1,9 @@
 * **进入**
-	* [vue](minibar/)
-	* [指南](minibar/guide)
+	* [Git](minibar/git)
+	* [vue](minibar/vue)
+	* [Restful](minibar/restful)
+	* [Spring](minibar/Spring)
+
 * **返回**
 	* [主页](/)
 

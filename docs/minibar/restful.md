@@ -1,6 +1,6 @@
-# REST (表达性状态转移)
+## REST (表达性状态转移)
 
-### restful(接口设计规范)
+## restful(接口设计规范)
 
 - **GET**（SELECT）：从服务器取出资源（一项或多项）。
 - **POST**（CREATE）：在服务器新建一个资源。
@@ -24,7 +24,7 @@ GET    /classes/classId/students：列出某个指定班级的所有学生的信
 DELETE classes/classId/teachers/ID：删除某个指定班级下的指定的老师的信息
 ```
 
-### **REST架构限制条件**
+## **REST架构限制条件**
 
 Fielding在论文中提出REST架构的6个**限制条件**，也可称为RESTful 6大原则， 标准的REST约束应满足以下6个原则：
 
@@ -42,7 +42,7 @@ Fielding在论文中提出REST架构的6个**限制条件**，也可称为RESTfu
 
 REST架构的一些风格和限制条件就先介绍到这里，后面就对RESTful风格API具体介绍。
 
-### **URL设计规范**
+## **URL设计规范**
 
 URL为统一资源定位器 ,接口属于服务端资源，首先要通过URL这个定位到资源才能去访问，而通常一个完整的URL组成由以下几个部分构成：
 
@@ -67,7 +67,7 @@ version：API版本号，有些版本号放置在头信息中也可以，通过�
 resources：资源，RESTful API推荐用小写英文单词的**复数**形式。
 resource_id：资源的id，访问或操作该资源。
 
-### **状态码和返回数据**
+## **状态码和返回数据**
 
 服务端处理完成后客户端也可能不知道具体成功了还是失败了，服务器响应时，包含**状态码**和**返回数据**两个部分。
 
@@ -98,11 +98,11 @@ resource_id：资源的id，访问或操作该资源。
 
 
 
-#### 项目完整Git地址：
+### 项目完整Git地址：
 
 https://github.com/Mini-Bar/Springboot-restful.git
 
-##### 引用
+#### 引用
 
 https://zhuanlan.zhihu.com/p/121522365
 
