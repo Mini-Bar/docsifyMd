@@ -1,5 +1,7 @@
 * **欢迎来看mini**
 	* [Git](minibar/)
-	* [指南](minibar/guide)
+	* [vue](minibar/vue)
+	* [Restful](minibar/restful)
+	* [Spring](minibar/Spring)
 
 
