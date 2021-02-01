@@ -8,6 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+		<!-- 引入 CSS 文件 -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
 		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css"> -->
 		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"> -->
 		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
@@ -19,7 +21,7 @@
 		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"> -->
 	</head>
 	<body>
-
+	
 		<div id="app">
 			<!-- mini -->
 			<!-- <img src="" > -->
@@ -29,20 +31,20 @@
 
 		<script>
 			// 离线模式
-			if (typeof navigator.serviceWorker !== 'undefined') {
-				navigator.serviceWorker.register('sw.js')
-			}
+			// if (typeof navigator.serviceWorker !== 'undefined') {
+			// 	navigator.serviceWorker.register('sw.js')
+			// }
 			window.$docsify = {
 				loadSidebar: true,
 				loadNavbar: true,
 				coverpage: true,
 				subMaxLevel: 2,
-
+				
 				name: 'MiniBar',
 				repo: 'https://github.com/Mini-Bar/docsifyMd.git',
-
+	
 				copyCode: {
-
+					
 					buttonText: {
 						'/': '点击复制'
 					},
@@ -54,15 +56,18 @@
 					}
 				},
 				search: {
-					paths: 'auto',
-					placeholder: '搜索',
-					noData: '找不到结果',
-					depth: 3,
-				}
-
+				  paths: 'auto',
+				  placeholder: '搜索',
+				  noData: '找不到结果',
+				  depth: 3,
+				},
+		
 			}
 		</script>
 
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<script>
 			const gitalk = new Gitalk({
 				clientID: '2905c4da17cdbdc8bcdf',
@@ -84,16 +89,12 @@
 		</script>
 
 
-		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<!-- Docsify v4 -->
 		<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
 
 		<!-- 图片自动缩放 -->
-		<!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> -->
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
 		<!-- 复制 -->
@@ -108,13 +109,18 @@
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
 		<!--  Vuep 写 Playground -->
-		<!-- 引入 CSS 文件 -->
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
+	
 		<!-- 或引入压缩版文件 -->
+		
 		<script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
 		
 
 		<!-- 分页导航 -->
 		<!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
+
+		<!-- 搜索 -->
+		<!-- <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script> -->
+		<!--全文搜索,直接用官方提供的无法生效-->
+		<!-- <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script> -->
 	</body>
 </html>
