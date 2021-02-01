@@ -1,7 +1,8 @@
 # MINIBAR
 
+> 欢迎来看mini
 
-> 我要开始装逼了
-
+[GitHub](https://github.com/docsifyjs/docsify/)
 [CSDN](https://blog.csdn.net/qq_42022965/article/details/113136092)
-[滚动鼠标](#introduction)
+[开始阅读](minibar/)
+

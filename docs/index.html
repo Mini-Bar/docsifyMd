@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- Theme: Simple Dark -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
-<!-- Theme: Defaults -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"> -->
-</head>
-<body>
-	 <nav>
-	    <a href="#/">EN</a>
-	    <a href="#/zh-cn/">中文</a>
-	  </nav>
-  <div id="app">
-	  <!-- mini -->
-  </div>
-  <script>
-    window.$docsify = {
-      loadSidebar: true,
-	   loadNavbar: true,
-	   coverpage: true,
-	   subMaxLevel: 2,
-      name: '',
-      repo: ''
-    }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="description" content="Description">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css"> -->
+		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"> -->
+		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
+		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css"> -->
+
+		<!-- Theme: Simple Dark -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+		<!-- Theme: Defaults -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"> -->
+	</head>
+	<body>
+		<nav>
+			<a href="#/">EN</a>
+			<a href="#/zh-cn/">中文</a>
+		</nav>
+		<div id="app">
+			<!-- mini -->
+		</div>
+		<script>
+			window.$docsify = {
+				loadSidebar: true,
+				loadNavbar: true,
+				coverpage: true,
+				subMaxLevel: 2,
+				name: 'MiniBar',
+				// repo: '',
+				// GENERAL
+				// -----------------------------------------------------------------
+				// name: 'docsify-copy-code',
+				repo: 'https://github.com/Mini-Bar/docsifyMd.git',
+				// loadNavbar: 'navbar.md',
+				// themeColor: 'purple',
+
+				// NAVIGATION
+				// -----------------------------------------------------------------
+				alias: {
+					// Reuse navbar for all locals
+					'/.*/navbar.md': '/navbar.md',
+					// Locals
+					'/zh-cn/(.*)': './zh-cn/$1',
+					'/de-de/(.*)': './de-de/$1',
+					'/ru/(.*)': './ru/$1',
+					'/es/(.*)': './es/$1'
+				},
+
+				// PLUGINS
+				// -----------------------------------------------------------------
+				copyCode: {
+					// buttonText : 'buttonText:String',
+					// errorText  : 'errorText:String',
+					// successText: 'successText:String'
+
+					buttonText: {
+						'/': '点击复制'
+					},
+					errorText: {
+						'/': '错误'
+					},
+					successText: {
+						'/': '复制'
+					}
+				}
+			}
+		</script>
+		<!-- Docsify v4 -->
+		<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+		
+		<!-- 图片自动缩放 -->
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+		
+		<!-- 复制 -->
+		<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+		
+		<!-- 代码高亮 -->
+		<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+		
+		<!-- vue -->
+		<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+		
+		<!--  Vuep 写 Playground -->
+			<!-- 引入 CSS 文件 -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
+			<!-- 或引入压缩版文件 -->
+		<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+	</body>
 </html>
