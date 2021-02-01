@@ -7,6 +7,7 @@
 		<meta name="description" content="Description">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css"> -->
 		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"> -->
 		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
@@ -26,6 +27,9 @@
 			<!-- mini -->
 		</div>
 		<script>
+			if (typeof navigator.serviceWorker !== 'undefined') {
+				navigator.serviceWorker.register('sw.js')
+			}
 			window.$docsify = {
 				loadSidebar: true,
 				loadNavbar: true,
@@ -71,29 +75,46 @@
 				}
 			}
 		</script>
+
+
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+		<script>
+			const gitalk = new Gitalk({
+				clientID: '2905c4da17cdbdc8bcdf',
+				clientSecret: '904179dc2f054ea2e0384e0e847d6701186acd9f',
+				repo: 'docsifyComment',
+				owner: 'Mini-Bar',
+				admin: ['Mini-Bar'],
+				// facebook-like distraction free mode
+				distractionFreeMode: false
+			})
+		</script>
+
+
 		<!-- Docsify v4 -->
 		<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
-		
+
 		<!-- 图片自动缩放 -->
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-		
+
 		<!-- 复制 -->
 		<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-		
+
 		<!-- 代码高亮 -->
 		<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-		
+
 		<!-- vue -->
 		<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-		
+
 		<!--  Vuep 写 Playground -->
-			<!-- 引入 CSS 文件 -->
+		<!-- 引入 CSS 文件 -->
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
-			<!-- 或引入压缩版文件 -->
+		<!-- 或引入压缩版文件 -->
 		<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
